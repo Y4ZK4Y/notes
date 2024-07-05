@@ -1,4 +1,4 @@
-# Git Terminology and Commands
+# Notes about getting started with git and Github as a junior developer
 
 ## Terminology:
 
@@ -38,9 +38,9 @@
 
 - **`git branch <branchname>`**: Create a new branch.
 
-- **`git checkout <branchname>`**: Switch to a branch.
+- **`git switch <branchname>`**: Switch to a branch.
 
-- **`git checkout -b <branchname>`**: Create and switch to a new branch.
+- **`git switch -c <branchname>`**: Create and switch to a new branch.
 
 - **`git branch -d <branchname>`**: Delete a branch.
 
@@ -56,11 +56,11 @@
 
 - **`git add .`**: Stage all changes in the directory.
 
-- **`git commit -m “commit msg”`**: Commit the staged changes with a message.
+- **`git commit -m 'commit msg'`**: Commit the staged changes with a message.
 
 - **`git push -u origin main`**: Push changes to the remote repository and set the upstream for your current branch. In the future, you can simply use `git push` or `git pull` without specifying the branch, and Git will know `origin main`.
 
-- **`git pull —rebase origin main`**: Fetch the changes from the remote and rebase your current branch on top of the remote main branch.
+- **`git pull --rebase origin main`**: Fetch the changes from the remote and rebase your current branch on top of the remote main branch.
 
 ### Miscellaneous
 
@@ -70,8 +70,47 @@
 
 - **`git merge <branchname>`**: Integrate changes from another branch into the main branch.
 
-- **`git merge —abort`**: Stop the merge process.
+- **`git merge --abort`**: Stop the merge process.
+
+- **`git stash`**: Temporarily shelves changes so you can work on a different task.
+
+- **`git stash pop`**: Applies stashed changes back to your working directory.
+
+- **`git revert <commit>`**: Creates a new commit that undoes the changes made in a specific commit.
+
+- **`git reset`**: Resets your index and working directory to the state of a specific commit. Use with caution.
+
+- **`git rebase -i <commit>`**: Start an interactive rebase session to modify commits from a specific point.
+
+### Enhancing Workflow with Git
+
+- **`git status`**: Shows the status of changes as untracked, modified, or staged.
+- **`git log`**: Displays the commit history for the current branch, showing the author, date, and commit message.
+- **`git diff`**: Shows the differences between your working directory and the index (staged changes) or between any two commits.
+- **`git show <commit>`**: Displays metadata and content changes of the specified commit.
+- **`git fetch --all`**: Fetches changes from all remote repositories and branches.
+- **`git pull --all`**: Fetches changes from all branches from the remote repository and merges them into the current branch.
+- **`git push --all`**: Pushes all local branches to the remote repository.
+- **`git reset --hard <commit>`**: Resets the current branch to the specified commit, discarding all changes in the working directory and index.
+- **`git reset --soft <commit>`**: Moves the current branch to the specified commit, but leaves your working directory and index (staged changes) as they were.
+- **`git stash list`**: Lists all stashed changes.
+- **`git stash apply`**: Applies the most recently stashed changes without removing them from the stash list.
+- **`git stash drop`**: Removes the most recent stash from the stash list.
+- **`git tag -a <tagname> -m "message"`**: Creates an annotated tag with a message.
+- **`git tag`**: Lists all tags.
+- **`git show <tag>`**: Shows the commit that a tag is pointing to along with the tag message.
+
 
 ### GitHub CLI (`gh`)
 
 - **`gh repo create my-new-repo --public --description "My new repository"`**: Create a new repository on GitHub from the command line.
+- **`gh pr list`**: Lists pull requests in the current repository.
+- **`gh pr checkout <pr-number>`**: Checks out a pull request locally for review or testing.
+- **`gh pr create`**: Creates a new pull request.
+- **`gh pr merge <pr-number>`**: Merges a pull request.
+- **`gh issue create`**: Creates a new issue in the current repository.
+- **`gh issue list`**: Lists issues in the current repository.
+- **`gh issue view <issue-number>`**: Views details of the specified issue.
+
+
+
