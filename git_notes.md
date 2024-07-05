@@ -29,7 +29,7 @@
 
 - **`git init`**: Initialize a new Git repository.
 
-- **`git config —global init.defaultBranch main`**: Set the default branch name for new repositories.
+- **`git config --global init.defaultBranch main`**: Set the default branch name for new repositories.
 
 - **`git branch -m <name>`**: To rename a branch.
 
