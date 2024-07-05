@@ -31,7 +31,6 @@
 
 - **`git config --global init.defaultBranch main`**: Set the default branch name for new repositories.
 
-- **`git branch -m <name>`**: To rename a branch.
 
 ### Working with Branches
 
